@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.css';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import './global.css';
+import BadgeNew from './pages/BadgeNew';
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const container = document.getElementById('app');
+
+ReactDOM.render(<BadgeNew />, container);
+
+{/* <Badge 
+  firstName="Roy" 
+  lastName="Vargas"
+  avatarUrl="https://s.gravatar.com/avatar/28ef14ef207a0118ae862f0e289fda16?s=80"
+  jobTitle="Kickass senior devs"
+  twitter="Royvargas55"/> */}
