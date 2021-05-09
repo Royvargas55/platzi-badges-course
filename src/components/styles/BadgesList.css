@@ -8,12 +8,29 @@
   border-radius: 5px;
   display: flex;
   padding: 1rem;
+  margin-bottom: 1rem;
 }
 
 .BadgesListItem__avatar {
   border-radius: 50%;
   background: #a3a3a3;
-  margin-right: 0.5rem;
+  margin-right: 1.5rem;
   width: 80px;
   height: 80px;
+}
+
+.BadgesListItem__twitter {
+  display: flex;
+}
+
+.BadgesListItem__twitter--logo {
+  max-width:25px;
+  height:25px;
+  margin-right: 5px;
+}
+
+.BadgesListItem__twitter--user {
+  color: #00ACEE;
+  font-size: 17px;
+  font-weight: bold;
 }

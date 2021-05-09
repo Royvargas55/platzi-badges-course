@@ -9,6 +9,7 @@
     "bootstrap": "^4.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-router-dom": "4.3.1",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
   },
@@ -53,9 +54,5 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Royvargas55/platzi-badges-course.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Royvargas55/platzi-badges-course/issues"
-  },
-  "homepage": "https://github.com/Royvargas55/platzi-badges-course#readme"
+  }
 }

@@ -1,0 +1,14 @@
+.not-found {
+    height: 100vh;
+    background: url('../../images/stars.svg'), #1B1B25;
+    color: #ffffff;
+    padding-top: 10%;
+}
+
+.not-found__logo {
+    padding-left: 25%;
+}
+
+.not-found__logo img {
+    margin-bottom: 5%;
+}
