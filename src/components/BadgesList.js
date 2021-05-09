@@ -1,8 +1,17 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 import logoTwitter from '../images/twitter-logo.png';
 import './styles/BadgesList.css';
 export class BadgesList extends Component {
     render() {
+        if(this.props.badges.length === 0) {
+            return (
+                <div>
+                    <h3>No badges were found</h3>
+                    <Link className="btn btn-primary" to="/badges/new">Create new badge</Link>
+                </div>
+            )
+        }
         return (
             <div>
                 <ul className="list-unstyled">
