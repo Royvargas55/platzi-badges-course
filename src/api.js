@@ -28,6 +28,7 @@ const api = {
       return callApi('/badges');
     },
     create(badge) {
+      // throw new Error('Not found');
       return callApi(`/badges`, {
         method: 'POST',
         body: JSON.stringify(badge),
@@ -37,6 +38,7 @@ const api = {
       return callApi(`/badges/${badgeId}`);
     },
     update(badgeId, updates) {
+      // throw new Error('Not found');
       return callApi(`/badges/${badgeId}`, {
         method: 'PUT',
         body: JSON.stringify(updates),

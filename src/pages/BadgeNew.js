@@ -1,60 +1,44 @@
 import React from 'react';
 
-import './styles/BadgeNew.css';
-import header from '../images/badge-header.svg';
+// Components
+import header from '../images/platziconf-logo.svg';
 import BadgeForm from '../components/BadgeForm';
 import Badge from '../components/Badge';
 
-class BadgeNew extends React.Component {
-    state = { form: { 
-        firstName: '',
-        lastName: '',
-        email: '',
-        jobTitle: '',
-        twitter: '',
-     } };
+// Styles
+import './styles/BadgeNew.css';
 
-    handleChange = e => {
-        // const nextForm = this.state.form;
-        // nextForm[e.target.name] = e.target.value;
+function BadgeNew(props) {
+    return (
+        <>
+            <div className="BadgeNew__hero">
+                <img className="BadgeNew__hero-image img-fluid" src={header} alt="logo" />
+            </div>
 
-
-        this.setState({
-            form: {
-                ...this.state.form,
-                [e.target.name]: e.target.value
-            }
-        });
-    };
-
-    render() {
-        return(
-            <React.Fragment>
-                <div className="BadgeNew__hero">
-                    <img className="img-fluid" src={header} alt="logo"/>
-                </div>
-
-                <div className="container">
-                    <div className="row">
-                        <div className="col-6">
-                        <Badge 
-                            firstName={this.state.form.firstName} 
-                            lastName={this.state.form.lastName} 
-                            avatarUrl="https://s.gravatar.com/avatar/28ef14ef207a0118ae862f0e289fda16?s=80"
-                            jobTitle={this.state.form.jobTitle} 
-                            email={this.state.form.email} 
-                            twitter={this.state.form.twitter} 
+            <div className="container">
+                <div className="row">
+                    <div className="col-6">
+                        <Badge
+                            firstName={props.form.firstName || "FIRST_NAME"}
+                            lastName={props.form.lastName || "LAST_NAME"}
+                            jobTitle={props.form.jobTitle || "JOB_TITLE"}
+                            email={props.form.email || "EMAIL"}
+                            twitter={props.form.twitter || "TWITTER"}
                         />
-                        </div>
+                    </div>
 
-                        <div className="col-6">
-                            <BadgeForm onChange={this.handleChange} formValues={this.state.form}/>
-                        </div>
+                    <div className="col-6">
+                        <BadgeForm
+                            attendant="New Attendant"
+                            onChange={props.handleChange}
+                            onSubmit={props.handleSubmit}
+                            formValues={props.form}
+                            error={props.error} />
                     </div>
                 </div>
-            </React.Fragment>
-        )
-    }
+            </div>
+        </>
+    )
 }
 
 export default BadgeNew;
